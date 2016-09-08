@@ -19,7 +19,7 @@
                  .OrderBy<T1, T2>((s1, s2) => s1.id) //order by s1.id 多个order可以  .oderBy().orderby 叠加 
                  .Skip(1)
                  .Take(2)
-                 .Select<T1, T2, newT>((s1, s2) => new T() {  })// 也可以.Select("s1.*,s2.name as s2name").ToDynamic();
+                 .Select<T1, T2, newT>((s1, s2) => new newT() {  })// 也可以.Select("s1.*,s2.name as s2name").ToDynamic();
                  .ToList();]]>
 			</Code>
 		</Snippet>
