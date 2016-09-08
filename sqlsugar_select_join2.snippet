@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>sugar2表关联</Title>
+			<Shortcut>_sugar_select_2表关联</Shortcut>
+			<Description>2表关联</Description>
+			<Author></Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="csharp">
+        <![CDATA[ var list = db.Queryable<T1>()
+                 .JoinTable<T1, T2>((s1, s2) => s1.sch_id == s2.id) // left join  School s2  on s1.id=s2.id
+                 .Where<T1, T2>((s1, s2) => s1.id > 1)  // where s1.id>1
+                 .OrderBy<T1, T2>((s1, s2) => s1.id) //order by s1.id 多个order可以  .oderBy().orderby 叠加 
+                 .Skip(1)
+                 .Take(2)
+                 .Select<T1, T2, newT>((s1, s2) => new T() {  })//select目前只支持这种写法
+                 .ToList();]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
