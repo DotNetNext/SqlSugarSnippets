@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>sugar指定列更新</Title>
+			<Shortcut>_sugar指定列更新</Shortcut>
+			<Description>指定列更新</Description>
+			<Author></Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="csharp">
+        <![CDATA[db.Update<T>(new { updateField1 = "xx",updateField2 = "xx" }, it => it.id == id);]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

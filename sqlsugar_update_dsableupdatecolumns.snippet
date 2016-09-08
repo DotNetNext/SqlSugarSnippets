@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>sugar设置不更新列</Title>
+			<Shortcut>_sugar设置不更新列</Shortcut>
+			<Description>设置不更新列</Description>
+			<Author></Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="csharp">
+        <![CDATA[db.DisableUpdateColumns = new string[] { "CreateTime" };//设置CreateTime不更新]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
