@@ -14,13 +14,13 @@
 		<Snippet>
 			<Code Language="csharp">
         <![CDATA[ var list = db.Queryable<T1>()//注意JoinTable必须要有T1，就算是T5和T6 JOIN也要加上T1,例如 JoinTable<T1,T5,T6>((s1,s5,s6)=>s5.s6id=s6.id)
-                 .JoinTable<T1, T2>((s1, s2) => s1.sch_id == s2.id) // left join  School s2  on s1.id=s2.id
-                 .Where<T1, T2>((s1, s2) => s1.id > 1)  // where s1.id>1
-                 .OrderBy<T1, T2>((s1, s2) => s1.id) //order by s1.id 多个order可以  .oderBy().orderby 叠加 
-                 .Skip(1)
-                 .Take(2)
-                 .Select<T1, T2, newT>((s1, s2) => new newT() {  })// 也可以.Select("s1.*,s2.name as s2name").ToDynamic();
-                 .ToList();]]>
+                             .JoinTable<T1, T2>((s1, s2) => s1.sch_id == s2.id) // left join  School s2  on s1.id=s2.id
+                             .Where<T1, T2>((s1, s2) => s1.id > 1)  // where s1.id>1
+                             .OrderBy<T1, T2>((s1, s2) => s1.id) //order by s1.id 多个order可以  .oderBy().orderby 叠加 
+                             .Skip(1)
+                             .Take(2)
+                             .Select<T1, T2, newT>((s1, s2) => new newT() {  })// 也可以.Select("s1.*,s2.name as s2name").ToDynamic();
+                             .ToList();]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
