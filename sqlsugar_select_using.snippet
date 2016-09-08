@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>sugar创建数据库实例</Title>
+			<Shortcut>_sugar创建数据库实例</Shortcut>
+			<Description>创建数据库实例</Description>
+			<Author></Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="csharp">
+        <![CDATA[ using (var db = new SqlSugarClient(ConnectionString))
+            {
+            }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

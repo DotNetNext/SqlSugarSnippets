@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>sugar事务</Title>
+			<Shortcut>_sugar事务</Shortcut>
+			<Description>事务</Description>
+			<Author></Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="csharp">
+        <![CDATA[try
+                {
+                    db.BeginTran();//开启事务
+                    //db.BeginTran(IsolationLevel.ReadCommitted);+3重载可以设置事世隔离级别
+
+                    db.CommitTran();//提交事务
+                }
+                catch (Exception)
+                {
+                    db.RollbackTran();//回滚事务
+                    throw;
+                }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
