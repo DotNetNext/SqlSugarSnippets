@@ -2,9 +2,9 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>sugar批量插入高性能</Title>
-			<Shortcut>_sugar批量插入高性能</Shortcut>
-			<Description>实体结构必须与数据库一至，如果性能要求不高可以使用InsertRange</Description>
+			<Title>sugar删除多条非主键</Title>
+			<Shortcut>_sugar删除多非主键</Shortcut>
+			<Description>删除多条非主键</Description>
 			<Author></Author>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
@@ -13,7 +13,7 @@
 		</Header>
 		<Snippet>
 			<Code Language="csharp">
-        <![CDATA[ db.SqlBulkCopy<T>(list);]]>
+        <![CDATA[db.Delete<T, int>(it => it.status, new int[] { 1,2,3 });]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
