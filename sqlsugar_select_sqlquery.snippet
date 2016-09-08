@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>sugar使用SQL语句查询</Title>
+			<Shortcut>_sugar_select_使用SQL语句查询l</Shortcut>
+			<Description>使用SQL语句查询</Description>
+			<Author></Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="csharp">
+        <![CDATA[
+                List<T> list = db.SqlQuery<T>("select * from T where id=@id", new { id = 1 });
+                //转成dynamic
+                //dynamic list = db.SqlQueryDynamic("select * from student");
+                //转成json
+                //string list = db.SqlQueryJson("select * from student");]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
