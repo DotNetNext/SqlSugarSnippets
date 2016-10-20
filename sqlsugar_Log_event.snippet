@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>sugar启用日志事件</Title>
+			<Shortcut>_sugar_log_启用日志事件</Shortcut>
+			<Description>设置不更新列</Description>
+			<Author></Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="csharp">
+        <![CDATA[                //启用日志事件
+                db.IsEnableLogEvent = true;
+                db.LogEventStarting = (sql,par)=>{
+                    
+                };
+                db.LogEventCompleted = (sql,par)=>{
+                   
+                };
+                //下面写的语句都会进上面的回调函数 ]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
